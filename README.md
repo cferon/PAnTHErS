@@ -62,13 +62,26 @@ Note: the build process is very time consuming, it can last several hours.
 ## PAnTHErS installation
 ### Get the code
 
-Download [PAnTHErS  code](code%20url) on your local file system.
-
-Unpack the downloaded archive on your user home folder
+Download [PAnTHErS  code](https://github.com/cferon/PAnTHErS) on your local file system.
 
 
-    cd 
-    tar -xvf /path/to/panthers/archive.tar.gz 
+```
+	$> git clone https://github.com/cferon/PAnTHErS
+OR
+	$> wget https://github.com/cferon/PAnTHErS/archive/master.zip
+	$> unzip master.zip
+	$> mv PAnTHErS-master PAnTHErS
+```
+
+Then create a symbolic link named `panthers` on your home directory.
+This symbolic link is required for PAnTHErS graphical interface.
+
+
+```
+	$> cd ~
+	$> ln -s /path/to/PAnTHErS panthers
+```
+
 
 ### Starting PAnTHErS 
 Go to your Sage build folder and start Sage with the following command:
