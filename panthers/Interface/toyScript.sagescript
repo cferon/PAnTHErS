@@ -1,0 +1,106 @@
+#
+# (C) Copyright 2018 - Cyrielle FERON / ENSTA Bretagne.
+# Contributor(s) : Cyrielle FERON <cyrielle.feron@ensta-bretagne.org> (2018)
+#
+#
+# This software is governed by the CeCILL 2.1 license under French law and
+# abiding by the rules of distribution of free software.  You can  use,
+# modify and/ or redistribute the software under the terms of the CeCILL 2.1
+# license as circulated by CEA, CNRS and INRIA at the following URL
+# "http://www.cecill.info".
+#
+# As a counterpart to the access to the source code and  rights to copy,
+# modify and redistribute granted by the license, users are provided only
+# with a limited warranty  and the software's author,  the holder of the
+# economic rights,  and the successive licensors  have only  limited
+# liability.
+#
+# In this respect, the user's attention is drawn to the risks associated
+# with loading,  using,  modifying and/or developing or reproducing the
+# software by the user in light of its specific status of free software,
+# that may mean  that it is complicated to manipulate,  and  that  also
+# therefore means  that it is reserved for developers  and  experienced
+# professionals having in-depth computer knowledge. Users are therefore
+# encouraged to load and test the software's suitability as regards their
+# requirements in conditions enabling the security of their systems and/or
+# data to be ensured and,  more generally, to use and operate it in the
+# same conditions as regards security.
+#
+# The fact that you are presently reading this means that you have had
+# knowledge of the CeCILL 2.1 license and that you accept its terms.
+#
+#
+
+
+cd ~/panthers/
+
+load("const_id.sage")
+load("homomorphicobject.sage")
+load("parameter.sage")
+load("hemessage.sage")
+load("key.sage")
+load("builder.sage")
+load("finder.sage")
+load("objectoperator.sage")
+load("specificfunction.sage")
+load("atomicfunction.sage")
+load("atomicfunctioncreator.sage")
+load("specificfunctioncreator.sage")
+load("hebasicfunction.sage")
+load("hedec.sage")
+load("heenc.sage")
+load("headd.sage")
+load("hekeygen.sage")
+load("hemult.sage")
+load("hescheme.sage")
+load("fv12.sage")
+load("yashe.sage")
+load("fntru.sage")
+
+load("Complexity/complexity.sage")
+load("Complexity/homomorphicobjectcomplexity.sage")
+load("Complexity/objectoperatorcomplexity.sage")
+load("Complexity/atomicfunctioncomplexity.sage")
+load("Complexity/atomicfunctioncomplexitycreator.sage")
+load("Complexity/specificfunctioncomplexity.sage")
+load("Complexity/specificfunctioncomplexitycreator.sage")
+load("Complexity/hebasicfunctioncomplexity.sage")
+load("Complexity/hedeccomplexity.sage")
+load("Complexity/heenccomplexity.sage")
+load("Complexity/headdcomplexity.sage")
+load("Complexity/hekeygencomplexity.sage")
+load("Complexity/hemultcomplexity.sage")
+load("Complexity/heschemecomplexity.sage")
+load("Complexity/fv12complexity.sage")
+load("Complexity/yashecomplexity.sage")
+load("Complexity/fntrucomplexity.sage")
+
+load("Memory/memory.sage")
+load("Memory/homomorphicobjectmemory.sage")
+load("Memory/objectoperatormemory.sage")
+load("Memory/atomicfunctionmemory.sage")
+load("Memory/atomicfunctionmemorycreator.sage")
+load("Memory/specificfunctionmemory.sage")
+load("Memory/specificfunctionmemorycreator.sage")
+load("Memory/hebasicfunctionmemory.sage")
+load("Memory/heencmemory.sage")
+load("Memory/hedecmemory.sage")
+load("Memory/headdmemory.sage")
+load("Memory/hekeygenmemory.sage")
+load("Memory/hemultmemory.sage")
+load("Memory/heschemememory.sage")
+load("Memory/fv12memory.sage")
+load("Memory/yashememory.sage")
+load("Memory/fntrumemory.sage")
+
+load("Analyse/paramvariation.sage")
+load("Analyse/graphgeneration.sage")
+load("Analyse/parameterschoice.sage")
+load("Analyse/appli_toy.py")
+
+load("Calibration/calibration.sage")
+
+cd Interface
+
+load('exec_toy.py')
+quit
