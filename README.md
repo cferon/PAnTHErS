@@ -4,9 +4,13 @@ Prototyping and Analysis Tool for Homomorphic Encryption Schemes
 
 [TOC]
 
-## Presentation / Why ?
+## Quick Presentation
 
-Quick tool presentation -- TODO
+PAnTHErS is a tool written in Python, intented to evaluate Homomorphic Encryption Schemes (HE Schemes).
+Its goal is to provide a fast insight of execution time and memory consumption for an application using homomorphic encryption.
+
+PAnTHErS can then help users to choose the optimal HE Scheme to use for a given application.
+It also helps to choose the best parameters to use for a given HE Scheme.
 
 ## Getting Started
 
@@ -140,5 +144,5 @@ Then rebuild Sage's Python:
 PAnTHErS is licensed under the [CeCILL 2.1 License](http://www.cecill.info).
 See the License.txt file for more details.
 
-© 2018 Cyrielle Feron - ENSTA Bretagne
+Â© 2018 Cyrielle Feron - ENSTA Bretagne
 
