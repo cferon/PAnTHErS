@@ -31,7 +31,7 @@ $sage: load("interface.py")
 
 PAnTHErS interface should pop-up.
 
-| ![Startup](screen\00_Interface_Startup.png) |
+| ![Startup](screen/00_Interface_Startup.png) |
 | ------------------------------------------- |
 | *PAnTHErS Interface at startup*|
 
@@ -45,7 +45,7 @@ This part shows how to use PAnTHErS Interface in order to analyze or execute an 
 
 Select the kind of analysis you want to perform from the first interface pane:
 
-| ![](screen\01_Exec_Comp_Mem_Analysis.png) |
+| ![](screen/01_Exec_Comp_Mem_Analysis.png) |
 | ----------------------------------------- |
 | *Analysis selection from first pane* |
 
