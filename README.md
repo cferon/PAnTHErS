@@ -1,6 +1,8 @@
 # PAnTHErS
 
-Prototyping and Analysis Tool for Homomorphic Encryption Schemes
+Prototyping and Analysis Tool for Homomorphic Encryption Schemes (PAnTHErS) is the result of the work presented in [FLL20].
+
+[FLL20] Cyrielle Feron, Loïc Lagadec, Vianney Lapôtre. Automated exploration of homomorphic encryption scheme input parameters, Journal of Information Security and Applications, Volume 55, 2020, 102627, ISSN 2214-2126, https://doi.org/10.1016/j.jisa.2020.102627.
 
 [TOC]
 
