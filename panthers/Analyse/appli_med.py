@@ -34,7 +34,7 @@
 
 import time
 import psutil
-import ttk
+from tkinter import ttk
 import os
 import gc
 from sage.all_cmdline import *
@@ -725,7 +725,7 @@ def appliMedical(execOrAnalyse, scheme, params, progressBar) :
             progressBar.findPrefixeProgressBarLabel(scheme, paramsCopy)
             calibratedPoints = []
 
-            if execOrAnalyse == EXECUTION_ID : #execution
+            if execOrAnalyse == EXECUTION_ID :#execution
                 calibratedPoints = executeAppliMedical(scheme, paramsCopy, file, progressBar)
             elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID or execOrAnalyse == MEMORY_ANALYSIS_ID : #analyse
                 points = analyzeAppliMedical(scheme, paramsCopy, execOrAnalyse, file, progressBar)

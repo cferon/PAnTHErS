@@ -1,0 +1,3 @@
+PAnTHErS v1.0.1
+
+Corrections for compatibility with Sage9.5 and Python3.

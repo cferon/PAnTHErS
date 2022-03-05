@@ -34,7 +34,7 @@
 
 import time
 import psutil
-import ttk
+from tkinter import ttk
 
 from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
 
@@ -140,7 +140,7 @@ def appliTOREPLACE(execOrAnalyse, scheme, params, progressBar) :
             axeName = axeName + [paramsFixed]
 
             fileName = params[i].generateFileName(execOrAnalyse, "appli_name_"+schemeName, paramsCopy)
-            file = open(fileName + ".csv", "w", 0)
+            file = open(fileName + ".csv", "w")
             file.write(params[i].name + "\t")
             file.write(axeName[1])
             file.write("\n")
@@ -149,7 +149,7 @@ def appliTOREPLACE(execOrAnalyse, scheme, params, progressBar) :
             progressBar.findPrefixeProgressBarLabel(scheme, paramsCopy)
             calibratedPoints = []
 
-            if execOrAnalyse == EXECUTION_ID : #execution
+            if execOrAnalyse == EXECUTION_ID :#execution
                 calibratedPoints = executeAppliTOREPLACE(scheme, paramsCopy, file, progressBar)
             elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID or execOrAnalyse == MEMORY_ANALYSIS_ID : #analyse
                 points = analyzeAppliTOREPLACE(scheme, paramsCopy, execOrAnalyse, file, progressBar)

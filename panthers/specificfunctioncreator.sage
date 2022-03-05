@@ -108,8 +108,7 @@ class SpecificFunctionCreator(object):
         p = A
 
         M.value = matrix(R,p)
-
-    	return M
+        return M
 
     def make_addTimes(self) :
         """ SpecificFunction addTimes: d = a + b * c"""

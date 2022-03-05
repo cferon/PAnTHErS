@@ -33,10 +33,10 @@
 
 
 from functools import partial
-from Tkinter import *
+from tkinter import *
 from PIL import ImageTk
-import ttk
-from ttk import *
+from tkinter import ttk
+from tkinter.ttk import *
 import time
 
 attach("../const_id.sage")
@@ -58,20 +58,20 @@ class Interface(Frame):
         self.scheme = 0
 
         #Frame definition
-        self.analyzeFrame = LabelFrame(self, height=500, width=330, padx="10px")
+        self.analyzeFrame = LabelFrame(self, height=500, width=270, padx="10px")
         self.analyzeFrame.grid(row=1, column=1, sticky='n')
         self.analyzeFrame.grid_propagate(False)
 
         self.grid_rowconfigure(2, minsize="110px")
-        self.appFrame = LabelFrame(self, height=500, width=240, padx="10px")
+        self.appFrame = LabelFrame(self, height=500, width=220, padx="10px")
         self.appFrame.grid(row=1, column=2, sticky='n')
         self.appFrame.grid_propagate(False)
 
-        self.schemeFrame = LabelFrame(self, height=500, width=350, padx="10px")
+        self.schemeFrame = LabelFrame(self, height=500, width=200, padx="10px")
         self.schemeFrame.grid(row=1, column=3, sticky='n')
         self.schemeFrame.grid_propagate(False)
 
-        self.paramFrame = LabelFrame(self, height=500, width=280, padx="10px")
+        self.paramFrame = LabelFrame(self, height=500, width=290, padx="10px")
         self.paramFrame.grid(row=1, column=4, sticky='n')
         self.paramFrame.grid_propagate(False)
 
@@ -91,15 +91,15 @@ class Interface(Frame):
         self.defaultValues(0)
 
         # Frame Analysis
-        self.execOrAnalysis =  Label(self.analyzeFrame, text="Choose execution or one analysis", font="Calibri 12 bold")
+        self.execOrAnalysis =  Label(self.analyzeFrame, text="Choose execution or analysis", font="Calibri 10 bold")
         self.execOrAnalysis.grid(row=1, column=1, sticky=N+E+W+S, columnspan=2)
         self.valueBtnExecOrAnalysis = StringVar()
-        self.exploType = Label(self.analyzeFrame, text="Select exploration type", font="Calibri 12 bold")
+        self.exploType = Label(self.analyzeFrame, text="Select exploration type", font="Calibri 10 bold")
         self.exploTypeValue = IntVar()
         self.exploTypeCompromise = Radiobutton(self.analyzeFrame, variable=self.exploTypeValue, value=0, text="Best compromise")
         self.exploTypeComp = Radiobutton(self.analyzeFrame, variable=self.exploTypeValue, value=1, text="Low complexity")
         self.exploTypeMem = Radiobutton(self.analyzeFrame, variable=self.exploTypeValue, value=2, text="Low memory cost")
-        self.options = Label(self.analyzeFrame, text="Options", font="Calibri 12 bold")
+        self.options = Label(self.analyzeFrame, text="Options", font="Calibri 10 bold")
         self.compMaxLabel = Label(self.analyzeFrame, text="execution time max in seconds: ")
         self.compMaxValueInt = IntVar()
         self.compMaxValue = Entry(self.analyzeFrame, textvariable=self.compMaxValueInt, width=4)
@@ -109,24 +109,24 @@ class Interface(Frame):
         self.showExecOrAnalysis(2)
 
         # Frame Application
-        self.app_text =  Label(self.appFrame, text="Choose one application", font="Calibri 12 bold")
+        self.app_text =  Label(self.appFrame, text="Choose one application", font="Calibri 10 bold")
         self.app_text.grid(row=1, column=1, sticky=N+E+W+S, columnspan=7)
         self.valueBtnApp = StringVar()
         self.valueBtnSecu = IntVar()
-        self.security = Label(self.appFrame, text="Choose wanted security", font="Calibri 12 bold")
+        self.security = Label(self.appFrame, text="Choose wanted security", font="Calibri 10 bold")
         self.bouton80   = Radiobutton(self.appFrame, variable=self.valueBtnSecu, value=80, text="80 bits")
         self.bouton128 = Radiobutton(self.appFrame, variable=self.valueBtnSecu, value=128, text="128 bits")
-        self.depth = Label(self.appFrame, text="Choose range of depth", font="Calibri 12 bold")
+        self.depth = Label(self.appFrame, text="Choose range of depth", font="Calibri 10 bold")
         self.depthVar = ParameterInterface(self.appFrame, "Depth")
         self.depthVarValid = Button(self.appFrame, text="Confirm depth", command=self.validExplo)
         self.showApp(2)
 
         # Frame Scheme
-        self.scheme_text =  Label(self.schemeFrame, text="Choose one or several HE schemes", font="Calibri 12 bold")
+        self.scheme_text =  Label(self.schemeFrame, text="Choose HE scheme(s)", font="Calibri 10 bold")
         self.showSchemeSelection()
 
         # Frame Parameter
-        self.param_text =  Label(self.paramFrame, text="Fill parameters variation", font="Calibri 12 bold")
+        self.param_text =  Label(self.paramFrame, text="Fill parameters variation", font="Calibri 10 bold")
         self.bouton_confirm = Button(self.paramFrame, text="Confirm", command=self.confirmChoice)
         self.bouton_reset = Button(self.paramFrame, text="Reset", command=self.resetParam)
         self.bouton_default = Button(self.paramFrame, text="Default Value", command=self.defaultParam)
@@ -136,7 +136,7 @@ class Interface(Frame):
         self.param_text.grid(row=1, column=1, padx='10px', sticky='n', columnspan=7)
 
         # Frame Confirmation
-        self.confirm_text =  Label(self.confirmFrame, text="Analysis", font="Calibri 12 bold")
+        self.confirm_text =  Label(self.confirmFrame, text="Analysis", font="Calibri 10 bold")
         self.confirm_text.grid(row=1, column=1, padx='75px')
         self.labelVar = StringVar()
         self.labelConfirmation = Label(self.confirmFrame,textvariable= self.labelVar)

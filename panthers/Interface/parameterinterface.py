@@ -32,7 +32,7 @@
 #
 
 
-from Tkinter import *
+from tkinter import *
 
 class ParameterInterface :
 

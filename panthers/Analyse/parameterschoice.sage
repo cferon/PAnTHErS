@@ -266,7 +266,7 @@ def retrievePracticalAnalysis(appli, whichAnalysis, fileName) :
         raise Exception("retrievePracticalAnalysis: whichAnalysis({}) is not 1 for comp or 2 for mem or 3 for explo.".format(whichAnalysis))
 
 def executePracticalAnalysis(appli, whichAnalysis, fileName, scheme, paramsIn, progressBar = 0) :
-    file = open("Tmp/" + fileName + ".log", "w", 0)
+    file = open("Tmp/" + fileName + ".log", "w")
     memCost = 0
     infoFileName = "Tmp/executePracticalAnalysis_info.dat"
 
@@ -298,7 +298,7 @@ def executePracticalAnalysis(appli, whichAnalysis, fileName, scheme, paramsIn, p
     else :
         raise Exception("executePracticalAnalysis: appli ({}) is not available (> {})".format(appli, MAX_APP_ID))
 
-    file.write(out)
+    file.write(str(out))
     file.close()
     cost = retrievePracticalAnalysis(appli, whichAnalysis, fileName)
 

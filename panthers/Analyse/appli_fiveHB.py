@@ -34,7 +34,7 @@
 
 import time
 import psutil
-import ttk
+from tkinter import ttk
 
 from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
 
@@ -84,7 +84,7 @@ def appliFiveHB(execOrAnalyse, scheme, params, progressBar) :
             axeName = axeName + [paramsFixed]
 
             fileName = params[i].generateFileName(execOrAnalyse, "appli_fiveHB_"+schemeName, paramsCopy)
-            file = open("Res/" + fileName + ".csv", "w", 0)
+            file = open("Res/" + fileName + ".csv", "w")
             file.write(params[i].name + "\t")
             file.write(axeName[1])
             file.write("\n")
@@ -93,7 +93,7 @@ def appliFiveHB(execOrAnalyse, scheme, params, progressBar) :
             progressBar.findPrefixeProgressBarLabel(scheme, paramsCopy)
             calibratedPoints = []
 
-            if execOrAnalyse == EXECUTION_ID : #execution
+            if execOrAnalyse == EXECUTION_ID :#execution
                 calibratedPoints = executeAppliFiveHB(scheme, paramsCopy, file, progressBar)
             elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID or execOrAnalyse == MEMORY_ANALYSIS_ID : #analyse
                 points = analyzeAppliFiveHB(scheme, paramsCopy, execOrAnalyse, file, progressBar)

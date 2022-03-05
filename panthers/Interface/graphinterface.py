@@ -32,7 +32,7 @@
 #
 
 
-from Tkinter import *
+from tkinter import *
 from PIL import ImageTk
 
 class GraphInterface :

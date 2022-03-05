@@ -33,9 +33,9 @@
 
 
 from functools import partial
-from Tkinter import *
-import ttk
-from ttk import *
+from tkinter import *
+from tkinter import ttk
+from tkinter.ttk import *
 
 class Progress :
     """Display a progress bar"""

@@ -32,7 +32,7 @@
 #
 
 
-from Tkinter import *
+from tkinter import *
 attach("../Interface/parameterinterface.py")
 
 class SchemeInterface :

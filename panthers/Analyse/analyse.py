@@ -437,8 +437,8 @@ def readAndDraw(fileNameIn, fileNameOut) :
     return time, mib
 
 def executeCorners(appli, scheme, params, progressBar = 0) :
-    fileComp = open("Res/Exploration/explo_parameters_executed_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
-    fileMem = open("Res/Exploration/explo_parameters_executed_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
+    fileComp = open("Res/Exploration/explo_parameters_executed_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
+    fileMem = open("Res/Exploration/explo_parameters_executed_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
 
     fileComp.write("Scheme\tParameters\tComplexity Theoretical\tExecution Time (sec)\n")
     fileMem.write("Scheme\tParameters\tMemory Theoretical\tMemory Cost (MiB)\n")
@@ -484,8 +484,8 @@ def executeCorners(appli, scheme, params, progressBar = 0) :
 def analyzeEdges(appli, scheme, corners, progressBar = 0) :
     edges = []
 
-    fileComp = open("Res/Exploration/explo_parameters_theoretical_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
-    fileMem = open("Res/Exploration/explo_parameters_theoretical_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
+    fileComp = open("Res/Exploration/explo_parameters_theoretical_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
+    fileMem = open("Res/Exploration/explo_parameters_theoretical_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
 
     fileComp.write("Scheme\tParameters\tComplexity Theoretical\n")
     fileMem.write("Scheme\tParameters\tMemory Theoretical\n")
@@ -594,8 +594,8 @@ def appliExplorationScheme(appli, scheme, allSchemeParams, tabMinMax, progressBa
 
     if allParams != [] :
         # Analyze complexity and memory of application for each set of parameters
-        fileComp = open("Res/Exploration/explo_All_parameters_theoretical_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
-        fileMem = open("Res/Exploration/explo_All_parameters_theoretical_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w", 0)
+        fileComp = open("Res/Exploration/explo_All_parameters_theoretical_complexity_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
+        fileMem = open("Res/Exploration/explo_All_parameters_theoretical_memory_Appli" + getApplicationName(appli) + "_Scheme_" + getSchemeName(scheme) + ".csv", "w")
         fileComp.write("Scheme\tParameters\tComplexity Theoretical\n")
         fileMem.write("Scheme\tParameters\tMemory Theoretical\n")
 

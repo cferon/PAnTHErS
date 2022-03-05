@@ -34,7 +34,7 @@
 
 import time
 import psutil
-import ttk
+from tkinter import ttk
 
 from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
 
@@ -258,7 +258,7 @@ def appliCroissant(execOrAnalyse, scheme, params, progressBar) :
             axeCroissant = axeCroissant + [paramsFixed]
 
             fileCroissant = params[i].generateFileName(execOrAnalyse, "appli_croissant_"+schemeCroissant, paramsCopy)
-            file = open("Res/" + fileCroissant + ".csv", "w", 0)
+            file = open("Res/" + fileCroissant + ".csv", "w")
             file.write(params[i].name + "\t")
             file.write(axeCroissant[1])
             file.write("\n")
@@ -267,7 +267,7 @@ def appliCroissant(execOrAnalyse, scheme, params, progressBar) :
             progressBar.findPrefixeProgressBarLabel(scheme, paramsCopy)
             calibratedPoints = []
 
-            if execOrAnalyse == EXECUTION_ID : #execution
+            if execOrAnalyse == EXECUTION_ID :#execution
                 calibratedPoints = executeAppliCroissant(scheme, paramsCopy, file, progressBar)
             elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID or execOrAnalyse == MEMORY_ANALYSIS_ID : #analyse
                 points = analyzeAppliCroissant(scheme, paramsCopy, execOrAnalyse, file, progressBar)

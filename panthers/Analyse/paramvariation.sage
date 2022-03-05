@@ -160,7 +160,7 @@ class ParamVariation(object) :
         self.currentValue = int(texte[6].replace('\n',''))
 
     def generateFileName(self, execOrAnalyse, prefixe, paramvariationList) :
-    	fileName = prefixe
+        fileName = prefixe
         if execOrAnalyse == EXECUTION_ID :
             fileName = "execution_" + fileName
         elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID :
@@ -170,22 +170,22 @@ class ParamVariation(object) :
         else :
             raise Exception("ParamVariation - generateGraph: execOrAnalyse > 4 (impossible).")
 
-    	for i in range(len(paramvariationList)) :
-    		fileName = fileName + "_" + paramvariationList[i].name
-    		if paramvariationList[i].isFixed :
-    			fileName = fileName + "_" + str(paramvariationList[i].default)
-    		else :
-    			fileName = fileName + "_" + str(paramvariationList[i].min)
-    			fileName = fileName + "_" + str(paramvariationList[i].max)
-    			fileName = fileName + "_" + str(paramvariationList[i].step)
-    	return fileName
+        for i in range(len(paramvariationList)) :
+            fileName = fileName + "_" + paramvariationList[i].name
+            if paramvariationList[i].isFixed :
+                fileName = fileName + "_" + str(paramvariationList[i].default)
+            else :
+                fileName = fileName + "_" + str(paramvariationList[i].min)
+                fileName = fileName + "_" + str(paramvariationList[i].max)
+                fileName = fileName + "_" + str(paramvariationList[i].step)
+        return fileName
 
     def __repr__(self):
         return "ParamVariation: name({}), min({}), max({}), step({}), isFixed({}), default({}), currentValue({})".format(
                 self.name, self.min, self.max, self.step, self.isFixed, self.default, self.currentValue)
 
-	def __eq__(self, currentValue) :
-		if self.name == currentValue.name and self.min == currentValue.min and self.max == currentValue.max and self.step == currentValue.step and self.isFixed == currentValue.isFixed and self.default == currentValue.default :
-			return True
-		else :
-			return False
+    def __eq__(self, currentValue) :
+        if self.name == currentValue.name and self.min == currentValue.min and self.max == currentValue.max and self.step == currentValue.step and self.isFixed == currentValue.isFixed and self.default == currentValue.default :
+            return True
+        else :
+            return False

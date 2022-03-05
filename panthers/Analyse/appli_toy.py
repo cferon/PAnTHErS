@@ -34,7 +34,7 @@
 
 import time
 import psutil
-import ttk
+from tkinter import ttk
 
 from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
 
@@ -159,7 +159,7 @@ def appliToy(execOrAnalyse, scheme, params, progressBar) :
             progressBar.findPrefixeProgressBarLabel(scheme, paramsCopy)
             calibratedPoints = []
 
-            if execOrAnalyse == EXECUTION_ID : #execution
+            if execOrAnalyse == EXECUTION_ID :#execution
                 calibratedPoints = executeAppliToy(scheme, paramsCopy, file, progressBar)
             elif execOrAnalyse == COMPLEXITY_ANALYSIS_ID or execOrAnalyse == MEMORY_ANALYSIS_ID : #analyse
                 points = analyzeAppliToy(scheme, paramsCopy, execOrAnalyse, file, progressBar)
