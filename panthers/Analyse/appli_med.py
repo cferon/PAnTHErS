@@ -41,8 +41,8 @@ from sage.all_cmdline import *
 from sage.all import *
 from sage.stats.distributions.discrete_gaussian_polynomial import DiscreteGaussianDistributionPolynomialSampler
 
-attach("../builder.sage")
-attach("../Calibration/calibration.sage")
+attach("~/panthers/builder.sage")
+attach("~/panthers/Calibration/calibration.sage")
 
 builder = Builder()
 
