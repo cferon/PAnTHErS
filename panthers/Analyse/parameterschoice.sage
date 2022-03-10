@@ -239,6 +239,8 @@ def retrievePracticalAnalysis(appli, whichAnalysis, fileName) :
     text = file.readlines()
     file.close()
 
+    text = text[0].split('\\n')
+
     indexMem = 0
     indexComp = 0
 
@@ -249,11 +251,9 @@ def retrievePracticalAnalysis(appli, whichAnalysis, fileName) :
             indexComp = i
 
     lineMem = text[indexMem]
-    lineMem = re.sub("\s+", " ", lineMem)
     lineMem = lineMem.split(" ")[4]
 
     lineComp = text[indexComp]
-    lineComp = re.sub("\s+", " ", lineComp)
     lineComp = lineComp.split(" ")[1]
 
     if whichAnalysis == EXPLORATION_ID or whichAnalysis == EXECUTION_ID : #explo or exec
