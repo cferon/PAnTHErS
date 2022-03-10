@@ -33,7 +33,7 @@ At the time we write this Readme, the latest Sage version is 9.5. You may try la
 
 Note that PAnTHErS was originally developped using Sage 7.6.
 
-Here we download Sage 9.5 64 bits for Debian Linux 9 [**sage-8.2-Debian_GNU_Linux_9-x86_64.tar.bz2**](http://www-ftp.lip6.fr/pub/math/sagemath/src/sage-9.5.tar.gz) (1377.99 MB) dated from 2022-01-03 13:52.
+Here we download Sage 9.5 64 bits for Debian Linux 11.2 [**sage-9.5.tar.gz**](http://www-ftp.lip6.fr/pub/math/sagemath/src/sage-9.5.tar.gz) (1377.99 MB) dated from 2022-01-03 13:52.
 
 
 
